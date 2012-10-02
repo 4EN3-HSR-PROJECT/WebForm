@@ -3,7 +3,7 @@
    <head>
       <title>My Page</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no" />
-      <link rel="stylesheet" href="css/jquery.mobile-1.2.0-rc.2.min.css" />
+      <link rel="stylesheet" href="http://jquerymobile.com/demos/1.1.1/css/themes/default/jquery.mobile-1.1.1.css" />
       <link rel="stylesheet" href="css/main.css" />
       <script src="js/jquery-1.8.1.min.js"></script>
       <script src="js/jquery.mobile-1.2.0-rc.2.min.js"></script>
