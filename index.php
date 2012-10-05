@@ -63,6 +63,8 @@
              document.getElementById('radio-choice-0').click();
              $('input[name=radio-choice]').checkboxradio('refresh');
              $('#busfull').val('0').slider('refresh');
+             findGeo();
+             $('#username').val(getCookie("username"));
          };
 
       </script>
