@@ -2,6 +2,8 @@
  * - Use data-theme="r" for red versions of the default JQuery Mobile Buttons.
  ******************************************************************************************/
 
+input.my-url{display:none;}
+
 .ui-btn-up-r {
     border: 1px solid #721414;
     background: #AB2525;

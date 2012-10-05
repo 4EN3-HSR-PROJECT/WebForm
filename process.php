@@ -1,4 +1,7 @@
 <?php
+	if (empty($username) || empty($busnumber) || empty($location) || empty($busfull) || empty($radiochoice)) {
+		die("Javascript validation failed. Please retry");
+	}
 	include "/var/www/db.php";
 	$username = $_POST['username'];
 	$busnumber = $_POST['busnumber'];

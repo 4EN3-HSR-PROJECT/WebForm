@@ -1,3 +1,9 @@
+<?php
+if(!empty($_POST['my_url'])){
+	die('Dear bot, have a nice day elsewhere.');
+}
+?>
+
 <!DOCTYPE html> 
 <html>
    <head>
@@ -103,7 +109,7 @@
                   </div>
                   <input name="submit" id="submit" type="submit" value="Submit"/>
 	          <input name="reset" id="reset" type="reset" data-theme="r" value="Reset" onClick="resetForm();" />
-
+                  <input type="text" name="my_url" class="my-url" value="">
             </form>
          </div>
       </div>
