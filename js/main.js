@@ -10,6 +10,7 @@ $(document).on("pageshow", "#statPage", function() {
 	$("#statForm").validate({
 	   submitHandler: function(form) {
 		$.mobile.showPageLoadingMsg();
+                setCookie("username", $('#username').val(), 1);
 		$args = "username="+$('#username').val()+
 			"&busnumber="+$('#busnumber').val()+
 			"&location="+$('#location').val()+
@@ -53,6 +54,12 @@ function submitState (submitted) {
 		   submitted ? $("#okbutton").show() : $("#okbutton").hide();
 };
 
+function setCookie(c_name, value, exdays) {
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
+}
 
 
 

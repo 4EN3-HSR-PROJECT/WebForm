@@ -77,7 +77,7 @@
             <form data-ajax="true" name="data_entry" action="" method="post" id="statForm">
                <fieldset data-role="fieldcontain"> 
                   <label for="username" class="ui-hidden-accessible">Username:</label>
-                  <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username" />
+                  <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username" value="<?php echo $_COOKIE['username']; ?>"/>
                </fieldset>
                <fieldset data-role="fieldcontain"> 
                   <label for="busnumber" class="ui-hidden-accessible">Bus number:</label>
