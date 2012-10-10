@@ -1,7 +1,7 @@
 <?php
-if(!empty($_POST['my_url'])){
-	die('Dear bot, have a nice day elsewhere.');
-}
+	if(!empty($_POST['my_url'])){
+		die('Dear bot, have a nice day elsewhere.');
+	}
 ?>
 
 <!DOCTYPE html> 
@@ -9,10 +9,10 @@ if(!empty($_POST['my_url'])){
    <head>
       <title>My Page</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no" />
-      <link rel="stylesheet" href="http://jquerymobile.com/demos/1.1.1/css/themes/default/jquery.mobile-1.1.1.css" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+      <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
       <link rel="stylesheet" href="css/main.css" />
-      <script src="js/jquery-1.8.1.min.js"></script>
-      <script src="js/jquery.mobile-1.2.0-rc.2.min.js"></script>
       <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
       <script type="text/javascript" src="js/jquery.validate.js"></script>-->
       <script type="text/javascript" src="js/main.js"></script>
