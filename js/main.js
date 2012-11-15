@@ -12,9 +12,11 @@ $(document).on("pageshow", "#statPage", function() {
 		$.mobile.showPageLoadingMsg();
                 setCookie("username", $('#username').val(), 1);
 		$args = "username="+$('#username').val()+
-			"&busnumber="+$('#busnumber').val()+
+			//"&busnumber="+$('#busnumber').val()+
+			"&busnumber="+('input:radio[name=busnumber]:checked').val()+
 			"&location="+$('#location').val()+
-			"&busfull="+$('#busfull').val()+
+			//"&busfull="+$('#busfull').val()+
+			"&busfull="+$('input:radio[name=busfull]:checked').val()+
 			"&radio-choice="+$('input:radio[name=radio-choice]:checked').val();
                 jQuery.ajax({
 	      		type: "POST",
@@ -41,9 +43,11 @@ function submitState (submitted) {
 		   $.mobile.activePage.children('.ui-header').attr('data-theme', $theme).removeClass(removeClasses).addClass('ui-bar-' + $theme).children('h1').text($text);
 		   $.mobile.activePage.children('.ui-header').children(submitted ? 'a' : 'e').removeClass(removeClasses).addClass('ui-btn-up-' + $theme);
 		   $('#username').textinput(submitted ? 'disable' : 'enable');
-		   $('#busnumber').textinput(submitted ? 'disable' : 'enable');
+		   //$('#busnumber').textinput(submitted ? 'disable' : 'enable');
 		   $('#location').textinput(submitted ? 'disable' : 'enable');
-		   $('#busfull').textinput(submitted ? 'disable' : 'enable');
+		   //$('#busfull').textinput(submitted ? 'disable' : 'enable');
+		   submitted ? $('input[name=busnumber]').attr('disabled', 'disabled') : $('input[name=busnumber]').removeAttr('disabled');
+		   submitted ? $('input[name=busfull]').attr('disabled', 'disabled') : $('input[name=busfull]').removeAttr('disabled');
 		   submitted ? $('input[name=radio-choice]').attr('disabled', 'disabled') : $('input[name=radio-choice]').removeAttr('disabled');
 		   $('input[name=radio-choice]').checkboxradio('refresh'); 
 		   document.getElementById('busfulllabel').style.color = submitted ? "grey" : "white";
