@@ -66,7 +66,7 @@
          };
          
          function resetForm() {
-             document.getElementById('radio-choice-0').click();
+             document.getElementById('radio-choice-1').click();
              $('input[name=radio-choice]').checkboxradio('refresh');
              $('#busfull').val('0').slider('refresh');
              findGeo();
@@ -90,24 +90,35 @@
                   <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username" value="<?php echo $_COOKIE['username']; ?>"/>
                </fieldset>
 			   
-			   <!-- Bus number -->
-               <fieldset data-role="fieldcontain"> 
-                  <label for="busnumber" class="ui-hidden-accessible">Bus number:</label>
-                  <input type="text" class="required" minlength="5" name="busnumber" id="busnumber" placeholder="Bus number" />
-               </fieldset>
-			   
 			   <!-- Location -->
                <fieldset data-role="fieldcontain"> 
                   <label for="location" class="ui-hidden-accessible">Location:</label>
                   <input type="text" class="required" minlength="5" name="location" id="location" placeholder="Location" />
                </fieldset>
 			   
+			   <!-- Bus number -->
+               <!--fieldset data-role="fieldcontain"> 
+                  <label for="busnumber" class="ui-hidden-accessible">Bus number:</label>
+                  <input type="text" class="required" minlength="5" name="busnumber" id="busnumber" placeholder="Bus number" />
+               </fieldset-->
+			   <fieldset data-role="controlgroup" data-type="horizontal">
+			      <label>Bus route:</label><br>
+				  <input type="radio" name="busnumber" id="busnumber-51" value="51" />
+				  <label for="busnumber-51">51</label>
+				  <input type="radio" name="busnumber" id="busnumber-5C" value="5C" />
+				  <label for="busnumber-5C">5C</label>
+				  <input type="radio" name="busnumber" id="busnumber-bline" value="bline" />
+				  <label for="busnumber-bline">B-Line</label>
+				  <input type="radio" name="busnumber" id="busnumber-other" value="other" />
+				  <label for="busnumber-other">Other</label>
+			   </fieldset>
+			   
 			   <!-- Capacity -->
                <!--fieldset data-role="fieldcontain"> 
                   <label id="busfulllabel" for="busfull">How full is the bus:</label>
                   <input type="range" name="busfull" id="busfull" value="0" min="0" max="100" data-highlight="true" />
                </fieldset-->
-			   <fieldset data-role="controlgroup" data-type="horizontal" <!--style="text-align: center"-->>
+			   <fieldset data-role="controlgroup" data-type="horizontal">
 			      <label>How full is the bus:</label><br>
 			      <input type="radio" name="busfull" id="busfull-0" value="0" />
 				  <label for="busfull-0">0%</label>
@@ -132,9 +143,9 @@
                   </div>
 			   
 			   <!-- Submission / Reset Buttons -->
-                  <input name="submit" id="submit" type="submit" value="Submit"/>
-	          <input name="reset" id="reset" type="reset" data-theme="r" value="Reset" onClick="resetForm();" />
-                  <input type="text" name="my_url" class="my-url" value="">
+               <input name="submit" id="submit" type="submit" value="Submit"/>
+	           <input name="reset" id="reset" type="reset" data-theme="r" value="Reset" onClick="resetForm();" />
+               <input type="text" name="my_url" class="my-url" value="">
             </form>
          </div>
       </div>
