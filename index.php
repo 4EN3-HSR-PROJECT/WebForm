@@ -83,30 +83,55 @@
             </div>
          <div data-role="content">
             <form data-ajax="true" name="data_entry" action="" method="post" id="statForm">
+				
+				<!-- Username -->
                <fieldset data-role="fieldcontain"> 
                   <label for="username" class="ui-hidden-accessible">Username:</label>
                   <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username" value="<?php echo $_COOKIE['username']; ?>"/>
                </fieldset>
+			   
+			   <!-- Bus number -->
                <fieldset data-role="fieldcontain"> 
                   <label for="busnumber" class="ui-hidden-accessible">Bus number:</label>
                   <input type="text" class="required" minlength="5" name="busnumber" id="busnumber" placeholder="Bus number" />
                </fieldset>
+			   
+			   <!-- Location -->
                <fieldset data-role="fieldcontain"> 
                   <label for="location" class="ui-hidden-accessible">Location:</label>
                   <input type="text" class="required" minlength="5" name="location" id="location" placeholder="Location" />
                </fieldset>
-               <fieldset data-role="fieldcontain"> 
+			   
+			   <!-- Capacity -->
+               <!--fieldset data-role="fieldcontain"> 
                   <label id="busfulllabel" for="busfull">How full is the bus:</label>
                   <input type="range" name="busfull" id="busfull" value="0" min="0" max="100" data-highlight="true" />
-               </fieldset>
+               </fieldset-->
+			   <fieldset data-role="controlgroup" data-type="horizontal" <!--style="text-align: center"-->>
+			      <label>How full is the bus:</label><br>
+			      <input type="radio" name="busfull" id="busfull-0" value="0" />
+				  <label for="busfull-0">0%</label>
+			      <input type="radio" name="busfull" id="busfull-1" value="1" />
+				  <label for="busfull-1">25%</label>
+			      <input type="radio" name="busfull" id="busfull-2" value="2" />
+				  <label for="busfull-2">50%</label>
+			      <input type="radio" name="busfull" id="busfull-3" value="3" />
+				  <label for="busfull-3">75%</label>
+			      <input type="radio" name="busfull" id="busfull-4" value="4" />
+				  <label for="busfull-4">100%</label>
+			   </fieldset>
+			   
+			   <!-- On/Off Bus -->
                   <div data-role="fieldcontain" style="text-align: center;border:0">
                      <fieldset data-role="controlgroup" data-type="horizontal">
-                        <input type="radio" name="radio-choice" id="radio-choice-0" value="choice-1" checked="checked" />
+                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-2" checked="checked" />
+                        <label for="radio-choice-1">On the bus</label>
+                        <input type="radio" name="radio-choice" id="radio-choice-0" value="choice-1" />
                         <label for="radio-choice-0">Off the bus</label>
-                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-2" />
-                        <label for="radio-choice-1">On the bus</label>	    
                      </fieldset>
                   </div>
+			   
+			   <!-- Submission / Reset Buttons -->
                   <input name="submit" id="submit" type="submit" value="Submit"/>
 	          <input name="reset" id="reset" type="reset" data-theme="r" value="Reset" onClick="resetForm();" />
                   <input type="text" name="my_url" class="my-url" value="">
