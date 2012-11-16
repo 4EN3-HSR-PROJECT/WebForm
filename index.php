@@ -87,7 +87,9 @@
 				<!-- Username -->
                <fieldset data-role="fieldcontain"> 
                   <label for="username" class="ui-hidden-accessible">Username:</label>
-                  <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username" value="<?php echo $_COOKIE['username']; ?>"/>
+                  <input type="text" class="required" minlength="5" name="username" id="username" placeholder="Username"
+				     <?php if (isset($_COOKIE['username'])) { echo ' value="' . $_COOKIE['username'] . '"'; } ?>
+				  />
                </fieldset>
 			   
 			   <!-- Location -->
@@ -101,15 +103,15 @@
                   <label for="busnumber" class="ui-hidden-accessible">Bus number:</label>
                   <input type="text" class="required" minlength="5" name="busnumber" id="busnumber" placeholder="Bus number" />
                </fieldset-->
-			   <fieldset data-role="controlgroup" data-type="horizontal">
+			   <fieldset data-role="controlgroup" data-type="vertical">
 			      <label>Bus route:</label><br>
 				  <input type="radio" name="busnumber" id="busnumber-51" value="51" />
 				  <label for="busnumber-51">51</label>
 				  <input type="radio" name="busnumber" id="busnumber-5C" value="5C" />
 				  <label for="busnumber-5C">5C</label>
-				  <input type="radio" name="busnumber" id="busnumber-bline" value="bline" />
+				  <input type="radio" name="busnumber" id="busnumber-bline" value="B-Line" />
 				  <label for="busnumber-bline">B-Line</label>
-				  <input type="radio" name="busnumber" id="busnumber-other" value="other" />
+				  <input type="radio" name="busnumber" id="busnumber-other" value="Other" />
 				  <label for="busnumber-other">Other</label>
 			   </fieldset>
 			   
@@ -118,18 +120,21 @@
                   <label id="busfulllabel" for="busfull">How full is the bus:</label>
                   <input type="range" name="busfull" id="busfull" value="0" min="0" max="100" data-highlight="true" />
                </fieldset-->
-			   <fieldset data-role="controlgroup" data-type="horizontal">
-			      <label>How full is the bus:</label><br>
+			   <fieldset data-role="controlgroup" data-type="vertical">
+			      <label id="busfulllabel">How full is the bus:</label><br>
+				  
 			      <input type="radio" name="busfull" id="busfull-0" value="0" />
-				  <label for="busfull-0">0%</label>
-			      <input type="radio" name="busfull" id="busfull-1" value="1" />
-				  <label for="busfull-1">25%</label>
-			      <input type="radio" name="busfull" id="busfull-2" value="2" />
-				  <label for="busfull-2">50%</label>
-			      <input type="radio" name="busfull" id="busfull-3" value="3" />
-				  <label for="busfull-3">75%</label>
-			      <input type="radio" name="busfull" id="busfull-4" value="4" />
-				  <label for="busfull-4">100%</label>
+				  <label for="busfull-0">0% - Empty</label>
+			      <input type="radio" name="busfull" id="busfull-20" value="20" />
+				  <label for="busfull-20">20%</label>
+			      <input type="radio" name="busfull" id="busfull-40" value="40" />
+				  <label for="busfull-40">40%</label>
+			      <input type="radio" name="busfull" id="busfull-60" value="60" />
+				  <label for="busfull-60">60%</label>
+			      <input type="radio" name="busfull" id="busfull-80" value="80" />
+				  <label for="busfull-80">80% - Standing Only</label>
+			      <input type="radio" name="busfull" id="busfull-100" value="100" />
+				  <label for="busfull-100">100% - Full</label>
 			   </fieldset>
 			   
 			   <!-- On/Off Bus -->

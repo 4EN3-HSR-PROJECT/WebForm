@@ -13,7 +13,7 @@ $(document).on("pageshow", "#statPage", function() {
                 setCookie("username", $('#username').val(), 1);
 		$args = "username="+$('#username').val()+
 			//"&busnumber="+$('#busnumber').val()+
-			"&busnumber="+('input:radio[name=busnumber]:checked').val()+
+			"&busnumber="+$('input:radio[name=busnumber]:checked').val()+
 			"&location="+$('#location').val()+
 			//"&busfull="+$('#busfull').val()+
 			"&busfull="+$('input:radio[name=busfull]:checked').val()+
@@ -47,7 +47,9 @@ function submitState (submitted) {
 		   $('#location').textinput(submitted ? 'disable' : 'enable');
 		   //$('#busfull').textinput(submitted ? 'disable' : 'enable');
 		   submitted ? $('input[name=busnumber]').attr('disabled', 'disabled') : $('input[name=busnumber]').removeAttr('disabled');
+		   $('input[name=busnumber]').checkboxradio('refresh'); 
 		   submitted ? $('input[name=busfull]').attr('disabled', 'disabled') : $('input[name=busfull]').removeAttr('disabled');
+		   $('input[name=busfull]').checkboxradio('refresh'); 
 		   submitted ? $('input[name=radio-choice]').attr('disabled', 'disabled') : $('input[name=radio-choice]').removeAttr('disabled');
 		   $('input[name=radio-choice]').checkboxradio('refresh'); 
 		   document.getElementById('busfulllabel').style.color = submitted ? "grey" : "white";
