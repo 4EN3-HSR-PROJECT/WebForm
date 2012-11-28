@@ -14,7 +14,7 @@
       <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
       <link rel="stylesheet" href="css/main.css" />
       <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-      <script type="text/javascript" src="js/jquery.validate.js"></script>-->
+      <script type="text/javascript" src="js/jquery.validate.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript">
 
